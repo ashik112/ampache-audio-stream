@@ -1,4 +1,4 @@
-Amplayer
+Ampache Ionic Audio Streaming App
 =====================
 
 An ampache mobile player using ionic framework.
