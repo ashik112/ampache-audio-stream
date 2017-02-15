@@ -1,0 +1,46 @@
+<ion-view title="Downloaded Songs" class="my-header">	
+	<ion-nav-buttons side="left">
+		<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+	</ion-nav-buttons>
+	 
+	
+	<ion-content has-bouncing="false" class="player has-header padding" style="top:0;"><!--class=" padding" -->
+	<!--<div ng-repeat="step in downloadStatus">
+		<div ng-repeat="(key, value) in downloadStatus">
+			{{key}} : {{value}}
+		</div>
+	</div>-->
+	
+	<br><br>
+	
+	
+	
+	<ion-list>
+	   <ion-item class="item item-divider item-icon-right" style=" margin: 2px;border-color:navy !important;background-color:#3b5998 !important;" ng-repeat="(key,value) in downloadStatuss2" ng-click="playMedia(key)" >
+			<h2 style="color: white; font-style: bold;"><span ng-if="value!=100">{{value}}% </span>&nbsp;&nbsp;&nbsp;{{key}}</h2>	
+			<!--<div style="color: black; float: left;">{{value}}%</div>-->
+	   </ion-item>
+	</ion-list>
+	
+	
+	<ion-list>
+	   <ion-item ng-if="file.isFile" class="item item-divider item-icon-right" style=" margin: 2px;border-color:navy !important;background-color:#3b5998 !important;" ng-repeat="file in files"  >
+			<div style="float:left;">
+			<h2 style="color: white; font-style: bold;"><span >{{file.name}} </span></h2>	
+			</div>
+			<div style="float:right;">
+				<button style="float:right;" class="control play button button-positive icon ion-play pull-right" ng-click=" play(file.name)" ng-hide="playing"></button>
+				<button style="float:right;" class="control pause button button-dark icon ion-pause pull-right" ng-click=" play(file.name)"  ng-show="playing"></button>
+			</div>
+			<!--<div style="color: black; float: left;">{{value}}%</div>-->
+	   </ion-item>
+	</ion-list>
+
+	 <!--<button class="button button-block button-assertive" ng-click="play()">Test Play</button>-->	
+	</ion-content>
+	<div class="bar bar-footer bar-assertive my-footer" ng-hide='isMainPanel'>
+	   <h1 class="title" ng-click='goToPlayer()'>{{player.songTitle}}</h1>
+	   <button class="control play button button-positive icon ion-play pull-right" ng-click="player.play()" ng-hide="player.playing"></button>
+	   <button class="control pause button button-dark icon ion-pause pull-right" ng-click="player.pause()" ng-show="player.playing"></button>
+	</div>
+</ion-view>

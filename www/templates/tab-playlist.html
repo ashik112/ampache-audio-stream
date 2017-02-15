@@ -1,0 +1,61 @@
+<ion-view title="Playlists" class="Playlist">
+	<!--<<ion-nav-buttons side="left">
+		<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+	</ion-nav-buttons>-->
+	 <ion-nav-bar class="bar-clear nav-title-slide-ios7">    
+        
+		<ion-nav-buttons side="left">
+		<button class="button button-clear button icon-left ion-home" ng-click="myGoBack()" >
+		<i class="icon ion-ios-arrow-back"></i>
+		</button>
+    </ion-nav-buttons>
+      </ion-nav-bar>      
+
+	<br>
+    <br>
+    <div class="list " >
+      <label class="item item-input" style="opacity: 0.8;">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input ng-model="playlistSearch.name" ng-change="searchChange(playlistSearch.name)" type="text" placeholder="Search">
+      </label>
+    </div>
+    <ion-content has-bouncing="true" class="has-header padding " style="top:0;">
+        <!--ion-list>
+          <ion-item ng-repeat="playlist in playlists" type="item-text-wrap" href="#/tab/playlist/{{playlist.id}}">
+            {{playlist.name}}
+          </ion-item>
+        </ion-list-->
+        <br>
+        <br>
+        <br>
+        <br>
+        <!--<a class="item item-divider songs" ng-repeat="playlist in playlists track by $index" type="item-text-wrap" href="#/tab/playlist/{{playlist.id}}">
+                        {{$index+1}}. {{playlist.name}}  <em></em> ( {{playlist.items}} )  
+                </a >-->
+
+
+        <a ng-show="playlist.name" class="item  songs" collection-repeat="playlist in playlists | limitTo: limit | filter:playlistSearch.name" collection-item-height="100" href="#/tab/playlist/{{playlist.id}}"><!-- track by $index-->
+
+            <img style="width: 70px; height: 70px; float: left;" src="{{playlist.songs[0].art}}">
+
+<!--           <h2 style="color: white;">{{$index+1}}. &nbsp;{{playlist.name}}</h2>-->
+			<h2 style="color: white;"><br>&nbsp;&nbsp;&nbsp;{{playlist.name}}</h2>
+			<h3 style="color: grey;">&nbsp;&nbsp;&nbsp;{{playlist.items}}&nbsp;Song/s</h3>	
+
+
+        </a>
+
+		<ion-infinite-scroll on-infinite="getMoreData()"  icon="ion-loading-c" distance="1%">
+		</ion-infinite-scroll >
+
+
+
+    </ion-content>
+
+    <div class="bar bar-footer bar-assertive my-footer" ng-hide='isMainPanel' >
+        <h1 class="title" ng-click='goToPlayer()'>{{player.songTitle}}</h1>
+        <button class="control play button button-positive icon ion-play pull-right" ng-click="player.play()" ng-hide="player.playing"></button>
+        <button class="control pause button button-dark icon ion-pause pull-right" ng-click="player.pause(1)" ng-show="player.playing"></button>
+    </div>
+
+</ion-view>

@@ -1,0 +1,78 @@
+<ion-view title="{{player.songTitle}}" class="my-header">	
+	<ion-nav-buttons side="left">
+		<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+	</ion-nav-buttons>
+	 
+	
+	<ion-content has-bouncing="false" class="player has-header padding"><!--class=" padding" -->
+	<div  class="item item-image albumArt" >
+				
+		<img src="{{player.albumArt}}">
+		<div>
+		
+		</div>		
+	</div>	
+	<div align="left">
+	<table>
+	<tr>
+	<td>
+	
+	</td>
+	<td >
+	
+		<button  class="player-buttons button button-positive icon ion-android-download" ng-click="dataBank.downloadSong()" >
+		<span ng-hide='progressSatus'>{{ downloadProgress }}%</span>
+		</button>
+	</td>
+	<td>{{player.songArtist}}</br>{{player.songAlbum}} 
+	</td>
+	
+	</tr>
+	
+	</table>
+	</div>
+	
+	<!--Using the HTML5 progress element--> 
+	<!--<progress  max="100" value="{{dataBank.progressValue}}"></progress>	-->
+	
+	
+	<div class="albumArt2">
+	</div>
+	<!-- <div class="bar bar-header bar-positive" style="padding:0px;height: 8px;" >-->
+   <!--     <progress id="progressbar" max="100" value="{{ downloadProgress }}" class="progress"> </progress>-->
+  <!--  </div>		 -->
+			
+		
+	
+		<div class="range range-positive" >
+		    <i>{{mm}}:{{ss}}</i>			
+		    <input id="seek" type="range" min="0" ng-model="data.seek" ng-change="seeked();" max="{{max}}" value="{{data.seek}}">
+		    <i>{{player.min}}:{{player.sec}}</i>
+		</div>		
+							
+		<div class="button-bar">				
+			<button class="player-buttons control prev button button-positive icon ion-skip-backward " ng-click="player.previous()" ></button>
+			<button class="player-buttons control shuffle button button-positive icon ion-shuffle" ng-click="player.shuffle()" ng-hide="player.shuffleState"></button>
+			<button class="press-button control shuffle button button-dark icon ion-shuffle positive" ng-click="player.shuffle()" ng-show="player.shuffleState"></button>
+	        <button class="play-button control play button button-positive icon ion-play" ng-click="player.play()" ng-hide="player.playing"></button>
+	        <button class="play-button control pause button button-dark icon ion-pause" ng-click="player.pause()" ng-show="player.playing"></button>
+	        <button class="player-buttons control repeat button button-positive icon ion-loop" ng-click="player.repeat()" ng-hide="player.repeatState"></button>
+	        <button class="press-button control repeat button button-dark icon ion-loop positive" ng-click="player.repeat()" ng-show="player.repeatState"></button>
+	        <button class="player-buttons control next button button-positive icon ion-skip-forward" ng-click="player.next()"></button>
+			<!--<button class=" button button-positive " ng-click="add()">H</button>-->
+		</div>
+		<!--	<div class="list card expandA">
+			<div class="item item-dark item-divider">
+				<div ng-click="toggleQueue()">Track List<i class="icon ion-more" style="float:right;"></i></div>
+				<div id="queue" class="list card" style="display:none;">					
+					<a class="item item-icon-right item-positive " ng-repeat="list in player.playlist" ng-click="player.queue.remove($index)">
+					    <i class="icon ion-minus"></i>
+					    {{list.title}}
+				  	</a>
+				</div>				
+			</div>
+					
+		</div>	-->
+		
+	</ion-content>
+</ion-view>

@@ -1,0 +1,146 @@
+<ion-view cache-view="true" title="Playlists" class="my-header">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+
+    <ion-pane>  
+        <ion-content lazy-scroll has-bouncing="true" overflow-scroll="true" class="Test" padding="false" style="top:0;"><!--overflow-scroll="true"-->
+            
+            <ion-slide-box auto-play="true" does-continue="true">
+                <ion-slide >
+                    <img src="http://www.artcell.com.bd/wp-content/uploads/2015/03/1.jpg" style="width:100%;height: 480px; margin:auto;display:block" >
+                </ion-slide>
+                <ion-slide >
+                    <img src="https://s10.postimg.org/5ywqbtezt/Nemesis2.jpg" style="width:100%;height: 480px; margin:auto;display:block" >
+                </ion-slide>
+                <ion-slide >
+                    <img src="https://i.ytimg.com/vi/k4Olavvmmnw/maxresdefault.jpg" style="width:100%;height: 480px; margin:auto;display:block" >
+                </ion-slide>
+            </ion-slide-box>
+            <!--	 <button ng-click="playMedia()">TEST PLAY</button>-->
+            <ion-list ng-class="{'grid-container' : data.grid , '' : !data.grid}" >
+
+                <ion-item ui-sref="playlist" class="my-list  item-icon-right">
+                    <i style="font-family: ''!important;">&nbsp;</i>Playlists
+                    <i style="font-size: large; color:white !important;" class="icon ion-chevron-right" ></i>
+                </ion-item>
+                <hscroller>
+
+                    <!--	<hcard ng-click="buttonClick('{{item.desc}}')" ng-repeat="item in items" index="{{$index}}" desc="{{item.desc}}" image="{{item.image}}"></hcard>-->
+                    <hcard ui-sref="tab.playlist-detail({playlistId: item.id})" ng-repeat="item in playlists2" index="{{$index}}" desc="{{item.name}}-{{item.id}}" image="{{item.songs[0].art}}" ></hcard><!--image="{{item.art}}"-->
+					<hcard  ui-sref="playlist"   desc="+ More" image="img/more.png" ></hcard>
+                </hscroller>
+
+
+                <ion-item ui-sref="tab.playlist"  class="my-list item-icon-right">
+                    <i style="font-family: ''!important;">&nbsp;</i>Star Artist
+                    <i style="font-size: large; color:white !important;" class="icon ion-chevron-right" ></i>
+                </ion-item>
+
+                <ion-item class="my-imgbox">
+                    <img src="img/arifin.jpg" style="height: 175px; width: 100%;" >
+                </ion-item>
+
+
+             <ion-item ui-sref="artist" class="my-list item-icon-right" >		
+                    <i style="font-family: ''!important;">&nbsp;</i>Artists
+                    <i style="font-size: large; color:white !important;" class="icon ion-chevron-right" ></i>
+                </ion-item>
+
+
+
+               <hscroller>
+
+                    <!--	<hcard ng-click="buttonClick('{{item.desc}}')" ng-repeat="item in items" index="{{$index}}" desc="{{item.desc}}" image="{{item.image}}"></hcard>-->
+                    <hcard ui-sref="tab.artist-detail({artistId: item.id})" ng-repeat="item in artists | limitTo: 10" index="{{$index}}" desc="{{item.name}}" image="http://128.199.210.190/music/get_coverart_image.php?obj={{item.id}}&type=artist" ></hcard><!--image="{{item.art}}"-->
+					<hcard  ui-sref="artist"  index="{{$index}}" desc="+ More"image="img/more.png" ></hcard>
+                </hscroller>
+
+                <ion-item ui-sref="albums" class="my-list item-icon-right" >	
+                     <i style="font-family: ''!important;">&nbsp;</i>Albums
+                    <i style="font-size: large; color:white !important;" class="icon ion-chevron-right" ></i>
+
+                </ion-item>
+
+
+
+                <hscroller>
+
+                    <!--	<hcard ng-click="buttonClick('{{item.desc}}')" ng-repeat="item in items" index="{{$index}}" desc="{{item.desc}}" image="{{item.image}}"></hcard>-->
+                    <hcard ui-sref="tab.album-detail({albumId: item.id})" ng-repeat="item in albums | limitTo: 10" index="{{$index}}" desc="{{item.name}}" image="http://128.199.210.190/music/get_coverart_image.php?obj={{item.id}}&type=album" ></hcard><!--image="{{item.art}}"-->
+					 <hcard  ui-sref="albums"  index="{{$index}}" desc="+ More" image="img/more.png" ></hcard>
+                </hscroller>
+
+
+                 <ion-item ui-sref="Rock" class="my-list item-icon-right" >   
+                     <i style="font-family: ''!important;">&nbsp;</i>Albums
+                    <i style="font-size: large; color:white !important;" class="icon ion-chevron-right" ></i>
+
+                </ion-item>
+
+
+
+                <hscroller>
+
+                    <!--    <hcard ng-click="buttonClick('{{item.desc}}')" ng-repeat="item in items" index="{{$index}}" desc="{{item.desc}}" image="{{item.image}}"></hcard>-->
+                    <hcard  ng-repeat="item in rockSongs | limitTo: 10" index="{{$index}}" desc="{{item.title}}" image="img/more.png"></hcard><!--image="{{item.art}}"-->
+                     
+                     <hcard  ui-sref="albums"  index="{{$index}}" desc="+ More" image="img/more.png" ></hcard>
+                </hscroller>
+
+
+                
+               <!-- <ion-item class="my-list item-icon-right" >		
+                    <i style="font-family: ''!important;">&nbsp;</i>Rating
+                    <i style="font-size: large; color:white !important;" class="icon ion-chevron-right" ></i>
+                </ion-item>-->
+               <!--  <hscroller>
+
+                    <!--	<hcard ng-click="buttonClick('{{item.desc}}')" ng-repeat="item in items" index="{{$index}}" desc="{{item.desc}}" image="{{item.image}}"></hcard>-->
+                    <!-- <hcard ui-sref="tab.playlist-detail({playlistId: item.id})" ng-repeat="item in playlists2" index="{{$index}}" desc="{{item.name}}" image="{{item.songs[0].art}}" ></hcard><!--image="{{item.art}}"--> 
+
+                <!-- </hscroller> -->
+				
+				 <!-- <ion-item class="my-list item-icon-right" >		
+                    <i style="font-family: ''!important;">&nbsp;</i>Year
+                    <i style="font-size: large; color:white !important;" class="icon ion-chevron-right" ></i>
+                </ion-item>
+                <hscroller> -->
+
+                    <!--	<hcard ng-click="buttonClick('{{item.desc}}')" ng-repeat="item in items" index="{{$index}}" desc="{{item.desc}}" image="{{item.image}}"></hcard>-->
+                  <!--   <hcard ui-sref="tab.playlist-detail({playlistId: item.id})" ng-repeat="item in playlists2" index="{{$index}}" desc="{{item.name}}" image="{{item.songs[0].art}}" ></hcard><!--image="{{item.art}}"-->
+
+               <!--  </hscroller> --> 
+				
+				 <!-- <ion-item class="my-list item-icon-right" >		
+                    <i style="font-family: ''!important;">&nbsp;</i>Year
+                    <i style="font-size: large; color:white !important;" class="icon ion-chevron-right" ></i>
+                </ion-item>
+                <hscroller> -->
+
+                    <!--	<hcard ng-click="buttonClick('{{item.desc}}')" ng-repeat="item in items" index="{{$index}}" desc="{{item.desc}}" image="{{item.image}}"></hcard>-->
+                   <!--  <hcard ui-sref="tab.playlist-detail({playlistId: item.id})" ng-repeat="item in playlists2" index="{{$index}}" desc="{{item.name}}" image="{{item.songs[0].art}}" ></hcard><!--image="{{item.art}}"-->
+
+                <!-- </hscroller>  -->
+
+                <!--<ion-item ng-repeat="item in items" 
+                          ng-class="{'grid col ' : data.grid , '' : !data.grid}"
+                          class="item-remove-animate">
+                  Item {{ item.id }}
+        
+                </ion-item>-->
+            </ion-list>
+
+        </ion-content>
+
+
+    </ion-pane>
+
+    <div class="bar bar-footer bar-assertive my-footer" ng-hide='isMainPanel'>
+        <h1 class="title" ng-click='goToPlayer()'>{{player.songTitle}}</h1>
+        <button class="control play button button-positive icon ion-play pull-right" ng-click="player.play()" ng-hide="player.playing"></button>
+        <button class="control pause button button-dark icon ion-pause pull-right" ng-click="player.pause()" ng-show="player.playing"></button>
+    </div>
+
+</ion-view>

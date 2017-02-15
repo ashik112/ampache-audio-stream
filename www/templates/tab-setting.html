@@ -1,0 +1,15 @@
+<ion-view title="Settings" class="my-header">	
+	<ion-nav-buttons side="left">
+		<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+	</ion-nav-buttons>
+	 
+	
+	<ion-content has-bouncing="false" class="player has-header padding"><!--class=" padding" -->
+		<ion-checkbox ng-model="isChecked" ng-checked="isChecked" ng-change="change(isChecked)" style="background: transparent !important; color: white; border-color: transparent;">Only use WIFI</ion-checkbox>
+	</ion-content>
+	<div class="bar bar-footer bar-assertive my-footer" ng-hide='isMainPanel'>
+	   <h1 class="title" ng-click='goToPlayer()'>{{player.songTitle}}</h1>
+	   <button class="control play button button-positive icon ion-play pull-right" ng-click="player.play()" ng-hide="player.playing"></button>
+	   <button class="control pause button button-dark icon ion-pause pull-right" ng-click="player.pause()" ng-show="player.playing"></button>
+	</div>
+</ion-view>

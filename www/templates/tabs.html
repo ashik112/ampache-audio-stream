@@ -1,0 +1,129 @@
+<ion-side-menus >
+    <!-- Center content -->
+    <ion-pane ion-side-menu-content edge-drag-threshold="true">
+      <ion-nav-bar class="bar-clear nav-title-slide-ios7">    
+        <ion-nav-back-button class="button-icon icon  ion-ios7-arrow-back"></ion-nav-back-button>
+      </ion-nav-bar>      
+
+      <ion-nav-view name="menuContenMain" animation="slide-left-right"></ion-nav-view>
+      
+      <ion-tabs class=" tabs-item-hide tabs-icon-top tabs-striped tabs-background-dark tabs-color-calm">
+
+		<!--tabs-item-hide-->
+
+      <!-- Player Tab -->
+      <ion-tab title="Player" icon="icon ion-play" href="#/tab/player">
+        <ion-nav-view name="menuPlayer"></ion-nav-view>
+      </ion-tab>
+
+
+      <!-- Playlist Tab -->
+      <ion-tab title="Playlist" icon="icon ion-document-text" href="#/tab/playlist">
+        <ion-nav-view name="menuPlaylist"></ion-nav-view>
+      </ion-tab>
+
+
+      <!-- Browse Tab -->
+      <ion-tab title="Browse" icon="icon ion-folder" href="#/tab/library">
+        <ion-nav-view name="menuLibrary"></ion-nav-view>
+      </ion-tab>
+	  
+	  
+	  <!-- Test Tab -->
+      <ion-tab title="Test" icon="icon ion-folder" href="#/tab/test">
+        <ion-nav-view name="menuTest"></ion-nav-view>
+      </ion-tab>
+	  
+	  <!-- Downloaded Songs Tab -->
+      <ion-tab title="Test" icon="icon ion-folder" href="#/tab/downloaded">
+        <ion-nav-view name="menuDownloaded"></ion-nav-view>
+      </ion-tab>
+	  
+	  <!-- About Tab -->
+	  <ion-tab title="About" icon="icon ion-folder" href="#/tab/about">
+        <ion-nav-view name="menuAbout"></ion-nav-view>
+      </ion-tab>
+
+	  
+	   <!-- Setting Tab -->
+	  <ion-tab title="Settings" icon="icon ion-folder" href="#/tab/setting">
+        <ion-nav-view name="menuSetting"></ion-nav-view>
+      </ion-tab>
+	  
+	  <!-- Artist Tab -->
+	  <ion-tab title="Artists" icon="icon ion-folder" href="#/tab/artist">
+        <ion-nav-view name="menuArtist"></ion-nav-view>
+      </ion-tab>
+	  
+	  <!-- Albums Tab -->
+	  <ion-tab title="Albums" icon="icon ion-folder" href="#/tab/albums">
+        <ion-nav-view name="menuAlbums"></ion-nav-view>
+      </ion-tab>
+	  
+   <!-- UserPlaylist Tab -->
+    <ion-tab title="Albums" icon="icon ion-folder" href="#/tab/userPlaylist">
+        <ion-nav-view name="menuUserPlaylist"></ion-nav-view>
+      </ion-tab>
+
+    </ion-tabs>
+    </ion-pane>
+
+    <!-- Right menu -->
+    <ion-side-menu width="250" side="left" class="my-container" >
+      <header >  
+        <h1 class="dTitle" >ColorBox</h1>
+      </header>
+      
+      <ion-content class="has-header " >
+        <ion-list>
+		<br><br><br><br><br><br>
+		
+          <ion-item nav-clear menu-close href="#/tab/player" class="transp">
+            <i class="icon ion-play"></i>
+            Playing
+          </ion-item>
+		   <ion-item  nav-clear menu-close href="#/tab/test" class="transp">
+            <i class="icon ion-home"></i>
+            Home
+          </ion-item>  
+		 <!--  <ion-item nav-clear menu-close href="#/tab/playlist" class="transp">
+            <i class="icon ion-document-text"></i>
+            Playlists                
+          </ion-item> -->
+		 
+          
+         <!-- <ion-item nav-clear menu-close href="#/tab/library" class="transp">
+            <i class="icon ion-folder"></i>
+            Browse                
+          </ion-item>-->
+		  <ion-item  nav-clear menu-close href="#/tab/about" class="transp">
+            <i class="icon ion-person"></i>
+            About
+          </ion-item>    
+		  
+		  <ion-item  nav-clear menu-close href="#/tab/downloaded" class="transp">
+            <i class="icon ion-android-download"></i>
+            Downloaded
+          </ion-item>    
+      <ion-item  nav-clear menu-close href="#/tab/userPlaylist" class="transp">
+            <i class="icon ion-android-download"></i>
+            My Playlist
+          </ion-item>    
+      
+		  
+		  <ion-item  nav-clear menu-close href="#/tab/setting" class="transp">
+            <i class="icon ion-wrench"></i>
+            Settings
+          </ion-item>    
+		  
+		  
+          <ion-item nav-clear menu-close ng-click="session.logout();" href="#" class="transp">
+            <i class="icon ion-log-out"></i>
+            Logout                
+          </ion-item>
+             
+		    		  
+        </ion-list>
+      </ion-content>
+    </ion-side-menu >
+  </ion-side-menus >

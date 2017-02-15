@@ -1,0 +1,29 @@
+ <drawer side="left">
+      <ion-content class="padding">
+        <h1 class="dTitle">ColorBox</h1>
+        <!--<button ng-click="closeDrawer()">Close</button>-->
+        
+		 <ion-list>
+          <ion-item class="item-trns" nav-clear menu-close href="#/tab/player">
+            <i class="icon ion-play"></i>
+            Home
+          </ion-item>
+          <ion-item nav-clear menu-close href="#/tab/playlist">
+            <i class="icon ion-document-text"></i>
+            Playlist                
+          </ion-item>
+          <ion-item nav-clear menu-close href="#/tab/library">
+            <i class="icon ion-folder"></i>
+            Browse                
+          </ion-item>
+          <ion-item nav-clear menu-close ng-click="session.logout();" href="#">
+            <i class="icon ion-log-out"></i>
+            Logout                
+          </ion-item>
+          <ion-item nav-clear menu-close href="#/tab/player">
+            <i class="icon ion-person"></i>
+            About
+          </ion-item>          
+        </ion-list>
+      </ion-content>
+    </drawer>

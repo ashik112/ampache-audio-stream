@@ -1,0 +1,22 @@
+<ion-view title="Home" cache-view="true">	
+	<ion-content class="home">
+		<h1 class="logo" style="font-size:50px; margin-top: 50px; color: black;">Bangla Tunes</h1>
+		<div class="list list-inset loginForm" style="margin-top: 80px; ">
+			<form novalidate>
+				<label class="item item-input" style="border-top:0px;border-left:0px;border-right:0px;">
+				<input type="text" name="username" ng-model="loginForm.username" placeholder="User Name" style="color:black !important; font-size: 20px !important;">
+				</label>
+				<label class="item item-input" style="border-top:0px;border-left:0px;border-right:0px;">
+				<input type="password" name="password" ng-model="loginForm.password" placeholder="Password" style="color:black !important; font-size: 20px !important;">
+				</label>
+				<div style="">
+					<button style="background: #3b5998;border-color: transparent;color:white; font-weight: bold; margin-top:70px; " class="button button-block  button-positive" ng-click="login()">Sign In</button>
+				</div>
+			</form>			
+		</div>	
+		
+	</ion-content>
+	<div class="bar bar-footer bar-light" style="background: transparent; ">
+  			<div class="title footer" style="color:grey;">ColorBox Ltd.</div>
+	</div>
+</ion-view>

@@ -1,0 +1,427 @@
+ @font-face { font-family: fontawesome; src: url('../fonts/together.ttf'); } 
+
+/*
+    ion-option-button
+*/
+ion-option-button {
+ /* font-size:12px;
+  background: white;
+  color : #111;
+  vertical-align: middle;
+  margin-top: : 22px !important;
+  padding-top: : 22px !important;
+   border-top: : 22px !important;*/
+
+    display: -webkit-inline-flex !important;
+  -webkit-align-items: center;
+  font-size: 13px !important;
+  font-weight: bold;
+  /* display: inline-block !important; font-size: 14px; line-height: 10px; padding: 5px;*/
+}
+/*
+   END of ion-option-button
+*/
+/* 
+	ionic-slide-box 
+	(Change the color of the Slide Pager Dots when acive)
+*/
+
+.slider-pager-page.active
+{
+	color: white !important;	
+}
+/* 
+	END ionic-slide-box 
+*/ 
+ h1
+{
+    /*font-family: "Comic Sans MS", cursive, sans-serif;*/
+    font-family: fontawesome !important;
+}
+
+img
+{
+	/*  background: url("../img/loading.gif")  no-repeat center center ;!important; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			background-size: cover; */
+}
+/* Empty. Add your own CSS if you like */
+
+ion-nav-bar
+{
+    /*background-color: transparent ;*/
+    background: url("../img/black.jpg") !important;
+    opacity: 0.7;
+}
+
+/*Progress Bar*/
+progress {
+    margin: 0 px;
+    height: 8 px;
+    background - color: #F1292B!important;
+    border - radius: 2 px;
+    box - shadow: 0 2 px 5 px rgba(0, 0, 0, 0.25) inset;
+}
+
+.home {
+    background: url("../img/bg.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+/*FOOTER*/
+.my-footer
+{
+   background: url("../img/black.jpg") !important;
+    /*background: transparent !important;*/
+    opacity: 0.7;
+
+
+}
+.my-footer .title
+{
+
+    font-size: 130%;
+    color: white !important;
+
+}
+.my-footer .button
+{
+
+
+    vertical-align: center;
+    background: white !important;
+    color: black !important;
+    border:0px;
+
+}
+/*END FOOTER*/
+
+/*Player ICON*/
+.player-buttons
+{
+    background: transparent !important;
+    border: 0px;
+    /*line-height: 1vh !important;*/
+    /*width: 50%;*/
+
+}
+.play-button
+{
+    background: transparent !important;
+    border: 0px;
+}
+.button-bar
+{
+    height: 99px;
+}
+button.press-button:before
+{
+
+    color:grey;
+}
+.press-button
+{
+    background: transparent !important;
+    border: 0px;
+    color:grey;
+}
+button.play-button:before
+{
+
+    font-size:80px !important;
+    color:white;
+
+}
+/* END ICON*/
+
+/*PLAYLIST SONGS*/
+.Playlist
+{
+	 background: #1c1b1a !important;
+}
+
+.songs
+{
+    vertical-align: left;
+ /*   padding-left:2px;*/
+    /*margin-left:-10px;*/
+    width:100%;
+
+	
+    background-color: transparent !important;
+/*    border-radius: 0%;*/
+    /*font-size : 12px;*/
+	border-top:0px;
+	border-right:0px;
+	border-left:0px;
+    border-bottom-width:1px;
+	
+	border-color: grey;
+   
+	font-size: 25sp;
+    /*opacity: .9;*/
+    /* background: url("../img/bg.png") no-repeat center center fixed; */
+    /* background-color: #3b5998;*/
+/*    background-color: rgb(59, 91, 152) !important;*/
+    /*background-color: #66347c;*/
+/*    background-color: transparent !important;*/
+
+
+    /* padding-left:2 px;*/
+/*    color: black !important;*/
+
+
+}
+/*.card{
+              background: transparent;
+              vertical-align: left;
+              padding-left:0px;
+              border-color:black;
+              margin:0px;
+     }*/
+/*.card .item{
+ background: red;
+ padding: 2px;
+ background: url("../img/bg.png") no-repeat center center fixed; 
+ border-color:white;
+ vertical-align: left;
+ font-style: bold;
+ margin:0px;
+ padding-left:2 px;
+ color: white;
+}*/
+/*END PLAYLIST SONGS*/
+
+.Playlist-Detail
+{
+	
+}
+.playlistDetail {
+    background: #1c1b1a !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+.Test
+{
+    /* background: url("../img/gradient.png") no-repeat center center fixed; 
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover; */
+	background-color:black;
+
+}
+
+/*Transparent List Item Test*/
+.my-list {
+
+    background-color:#303133;
+    /* background: url("../img/gradient.png");*/
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+   /* color: #21a9ff;*/
+    color: #4db8ff;
+    font-family:fontawesome;
+    font-weight: normal;
+    font-style:normal;
+    font-size: 125%;
+	border-top-width: 2px !important;
+	/*border-bottom-width: 2px !important;*/
+	border-color: black;
+    padding: 5px !important;
+}
+
+.my-imgbox
+{
+    padding: 0px !important;
+    margin: 0px !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    border-top: none;
+    background-color:#262828;
+    border-bottom: none;border-left: none;border-right: none;
+}
+/*End of Transparent List Item*/
+.logo {
+    text-align: center;
+    font-weight: bold;
+    font-size: 150px;
+    color: #4a87ee;	
+}
+.loginForm label, .loginForm{	
+    background: none !important;
+}
+.loginForm input{
+    color: #fff !important;
+}
+/*.bar-footer{	
+        background: rgba(0, 0, 0, 0) !important;
+}
+.footer{
+        color: #888888 !important;
+        font-size: 12px !important;
+}*/
+
+
+/* Modal, Popup, Loader */
+.loader{
+    width: 200px;
+}
+
+.row{	
+    margin: 0 !important;
+}
+
+.col-50 div{
+    height: 100%;
+    border: solid black 1px;
+}
+
+
+/* 
+Player 
+*/
+.player .list.card{
+    /*margin: 0 !important;*/
+}
+
+.item .item-content {
+    
+    background-color: transparent !important; 
+}
+/*
+	END Player
+*/
+
+/*Drawer*/
+drawer .item .item-content {
+    background-color: transparent !important;
+    color: white;
+    font-size: 120%;
+}
+
+/*
+	Side Menu
+*/
+.my-container {
+
+    background-color: transparent;
+    background: url("../img/bg.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    font-family: fontawesome;
+
+
+
+}
+
+
+.my-container .transp {
+    background-color: transparent !important;
+    color: black;
+    font-size: 12px;
+    font-weight:  normal;
+
+}
+
+.my-container .item .item-content {
+    background-color: transparent !important;
+    color: black;
+    font-size: 120%;  
+	font-weight: bold;
+}
+
+.my-container .item, .item-divider .my-container{
+    margin-left: 10%;
+    margin-right: 10%;
+    border-top-color: black;
+    border-bottom-color: black;
+    border-left-color: transparent;
+    border-right-color: transparent;
+
+}
+
+
+.dTitle
+{
+    color: black !important;
+    text-align: center;
+
+
+    height: 150px;
+    line-height: 150px;
+}
+
+.my-header
+{
+    background-color: transparent;
+    background: url("../img/gradient.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    color: white;
+}
+/*End of Side Menu*/
+/*player*/
+/* Album Art in Player*/
+.albumArt 
+{
+
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: transparent;
+    border:0px;
+
+
+    border-color: grey;
+
+
+
+    /*border-color: transparent;*/
+
+}
+
+
+.albumArt2
+{
+    width: 80%;
+    margin:10px auto;
+    border: 0px;
+}
+/* END Album Art in Player*/
+.control
+{
+    background-color: dark;
+}
+
+
+/*Grid Layout*/
+.grid
+{
+    /*height: 200px !important;*/
+    width: 100%;
+}
+
+.grid-container .list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+}
+
+/*List Horizontal Scroll Test*/
+/*div.hscroller {
+  position: relative;
+
+  
+}*/
+
+
+
+

@@ -1,0 +1,28 @@
+<ion-view title="Playlists" class="Playlist">
+	<!--<<ion-nav-buttons side="left">
+		<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+	</ion-nav-buttons>-->
+	 <ion-nav-bar class="bar-clear nav-title-slide-ios7">    
+        
+		<ion-nav-buttons side="left">
+		<button class="button button-clear button icon-left ion-home" ng-click="myGoBack()" >
+		<i class="icon ion-ios-arrow-back"></i>
+		</button>
+    </ion-nav-buttons>
+      </ion-nav-bar>      
+
+
+    <ion-content has-bouncing="true" class="has-header padding " style="top:0;">
+        
+
+
+
+    </ion-content>
+
+    <div class="bar bar-footer bar-assertive my-footer" ng-hide='isMainPanel' >
+        <h1 class="title" ng-click='goToPlayer()'>{{player.songTitle}}</h1>
+        <button class="control play button button-positive icon ion-play pull-right" ng-click="player.play()" ng-hide="player.playing"></button>
+        <button class="control pause button button-dark icon ion-pause pull-right" ng-click="player.pause(1)" ng-show="player.playing"></button>
+    </div>
+
+</ion-view>

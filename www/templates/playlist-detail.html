@@ -1,0 +1,55 @@
+<ion-view title="{{playlist[0].name}}" >
+	<!--<<ion-nav-buttons side="left">
+		<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+	</ion-nav-buttons>-->
+	  <ion-nav-buttons side="left">
+		<button class="button button-clear button icon-left ion-home" ng-click="myGoBack()" >
+		<i class="icon ion-ios-arrow-back"></i>
+		</button>
+    </ion-nav-buttons>
+	
+  	<ion-content  has-bouncing="true" class="has-header padding playlistDetail" style="top:0;">
+	
+		
+		</br>
+		</br>
+		
+
+		
+
+<ion-list >
+   
+ 
+   
+   <ion-item class="item  songs  item-remove-animate  item-icon-right" ng-repeat="track in songs" >
+		<h2 style="color: white; font-style: bold;">&nbsp;{{track.title}}<h2>
+		<h3 style="color: grey;">&nbsp;{{track.artist}}</h3>
+		<!--<ion-option-button ng-click="player.queue.add(songs, track.title)">Play</ion-option-button>-->
+		<!--<ion-option-button ng-click="dataBank.downloadSongP(track.url,track.title)">Download</ion-option-button>-->
+		<!--<ion-option-button>Add to Playlist</i></ion-option-button>-->
+		<ion-option-button class = "button-dark" ng-click="player.queue.add(songs, track.title)"><i class="icon ion-play"></i></ion-option-button>
+		<ion-option-button class = "button-dark" ng-click="dataBank.downloadSongP(track.url,track.title)"><i class="icon ion-android-download"></i></ion-option-button>
+		<ion-option-button class = "button-dark" ><i class="icon ion-plus"></i></ion-option-button>
+		<i style="float=right; color: grey;"class="icon ion-arrow-left-c icon-accessory">swipe left</i>
+   </ion-item>
+   
+   
+</ion-list>
+ 
+
+		
+		
+		
+		
+</ion-content>
+  
+	 <div class="bar bar-footer bar-assertive my-footer" ng-hide='isMainPanel'>
+	 <h1 class="title" ng-click='goToPlayer()'>{{player.songTitle}}</h1>
+	   <button class="control play button button-positive icon ion-play pull-right" ng-click="player.play()" ng-hide="player.playing"></button>
+	   <button class="control pause button button-dark icon ion-pause pull-right" ng-click="player.pause()" ng-show="player.playing"></button>
+	  
+	</div>
+
+</ion-view>
+
+
